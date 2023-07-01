@@ -1,0 +1,17 @@
+
+from collections import Counter
+
+
+X = int(input())
+mylist = (input().split())
+Counts = Counter(mylist)
+k = 0
+N = int(input())
+for i in range(N):
+    size, price = (input().split())
+    if Counts[size] > 0:
+        Counts[size] -= 1
+        
+        k += int(price)
+        
+print(k)
