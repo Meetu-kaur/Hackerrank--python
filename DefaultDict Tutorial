@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+from collections import defaultdict
+n, m = map(int, input().split())
+
+#A list
+a = []
+for i in range(n):
+    a.append(input())
+
+#B List
+b = []
+for i in range(m):
+    b.append(input())
+
+for i in b:
+    if i in a:
+        print(' '.join([str(j+1) for j in range(len(a)) if a[j] == i]))
+
+    else:
+            print(-1)
